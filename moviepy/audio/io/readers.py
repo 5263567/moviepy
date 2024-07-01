@@ -67,7 +67,7 @@ class FFMPEG_AudioReader:
     def initialize(self, starttime = 0):
         """ Opens the file, creates the pipe. """
 
-        self.close_proc() # if any
+        # self.close_proc() # if any
 
         if starttime !=0 :
             offset = min(1,starttime)
@@ -251,4 +251,5 @@ class FFMPEG_AudioReader:
 
     def __del__(self):
         # If the garbage collector comes, make sure the subprocess is terminated.
-        self.close_proc()
+        # self.close_proc()
+        pass
